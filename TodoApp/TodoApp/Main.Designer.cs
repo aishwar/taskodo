@@ -54,7 +54,7 @@
             // 
             this.nicMinimized.BalloonTipText = "Minimized!";
             this.nicMinimized.Icon = ((System.Drawing.Icon)(resources.GetObject("nicMinimized.Icon")));
-            this.nicMinimized.Text = "mYnOTES";
+            this.nicMinimized.Text = "Taskodo";
             this.nicMinimized.Visible = true;
             this.nicMinimized.DoubleClick += new System.EventHandler(this.nicMinimized_DoubleClick);
             // 
@@ -110,12 +110,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtItemToAdd);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
-            this.Opacity = 0.96;
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Todo";
+            this.Text = "Taskodo";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.Load += new System.EventHandler(this.frmTodoApp_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmTodoApp_FormClosed);
