@@ -75,7 +75,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AboutBox";
             this.Load += new System.EventHandler(this.AboutBox_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AboutBox_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

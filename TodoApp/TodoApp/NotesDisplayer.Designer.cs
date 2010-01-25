@@ -155,7 +155,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDisplayNotes";
             this.VisibleChanged += new System.EventHandler(this.NotesDisplayer_VisibleChanged);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NotesDisplayer_MouseDown);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NotesDisplayer_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NotesDisplayer_KeyDown);
             this.ResumeLayout(false);

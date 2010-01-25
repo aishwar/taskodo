@@ -119,7 +119,6 @@
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.Load += new System.EventHandler(this.frmTodoApp_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmTodoApp_FormClosed);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmTodoApp_MouseDown);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -9,19 +9,8 @@ using System.Runtime.InteropServices;
 
 namespace TodoApp
 {
-    partial class AboutBox : Form
+    partial class AboutBox : BaseForm
     {
-        // This movement without title bar code is from:
-        // http://www.codeproject.com/KB/cs/csharpmovewindow.aspx
-        const int WM_NCLBUTTONDOWN = 0xA1;
-        const int HT_CAPTION = 0x2;
-
-        [DllImportAttribute("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd,
-                         int Msg, int wParam, int lParam);
-        [DllImportAttribute("user32.dll")]
-        public static extern bool ReleaseCapture();
-
         public AboutBox()
         {
             InitializeComponent();
@@ -111,15 +100,6 @@ namespace TodoApp
         private void AboutBox_Load(object sender, EventArgs e)
         {
             txtAbout.Text = "I have always looked for a simple to use todo list. Something that doesn't take me away from what I am doing (for too long). I wanted something simple, something light weight. I couldn't find what I wanted, at least for free, so I figured I will build it. So here it is. Version 1. SimpleTodo. Press Alt+F4 to close this window.";
-        }
-
-        private void AboutBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
         }
     }
 }

@@ -11,19 +11,8 @@ using System.Runtime.InteropServices;
 
 namespace TodoApp
 {
-    public partial class NotesDisplayer : Form
+    public partial class NotesDisplayer : BaseForm
     {
-        // This movement without title bar code is from:
-        // http://www.codeproject.com/KB/cs/csharpmovewindow.aspx
-        const int WM_NCLBUTTONDOWN = 0xA1;
-        const int HT_CAPTION = 0x2;
-
-        [DllImportAttribute("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd,
-                         int Msg, int wParam, int lParam);
-        [DllImportAttribute("user32.dll")]
-        public static extern bool ReleaseCapture();
-
         Main _parent;
 
         public NotesDisplayer(Main parent)
@@ -93,15 +82,6 @@ namespace TodoApp
                     messageRectangle, StringFormat.GenericDefault);
 
                 e.DrawFocusRectangle();
-            }
-        }
-
-        private void NotesDisplayer_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
 

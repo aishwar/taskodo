@@ -11,19 +11,8 @@ using System.Collections.ObjectModel;
 
 namespace TodoApp
 {
-    public partial class Main : Form
+    public partial class Main : BaseForm
     {
-        // This movement without title bar code is from:
-        // http://www.codeproject.com/KB/cs/csharpmovewindow.aspx
-        const int WM_NCLBUTTONDOWN = 0xA1;
-        const int HT_CAPTION = 0x2;
-
-        [DllImportAttribute("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd,
-                         int Msg, int wParam, int lParam);
-        [DllImportAttribute("user32.dll")]
-        public static extern bool ReleaseCapture();
-
         NotesDisplayer _displayer;
         List<Note> _todoItems = new List<Note>();
         bool _dirty = true;
@@ -45,15 +34,6 @@ namespace TodoApp
             _displayer = new NotesDisplayer(this);
             _displayer.Show();
             _displayer.Visible = false;
-        }
-
-        private void frmTodoApp_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
         }
 
         private void txtItemToAdd_KeyDown(object sender, KeyEventArgs e)
