@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Collections.ObjectModel;
 
-namespace TodoApp
+namespace Taskodo
 {
     public partial class Main : BaseForm
     {

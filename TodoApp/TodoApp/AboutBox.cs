@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace TodoApp
+namespace Taskodo
 {
     partial class AboutBox : BaseForm
     {

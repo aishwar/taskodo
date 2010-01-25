@@ -8,8 +8,8 @@
     <ProjectGuid>{3C481B0E-7E71-45A0-8151-D0108699FB18}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TodoApp</RootNamespace>
-    <AssemblyName>TodoApp</AssemblyName>
+    <RootNamespace>Taskodo</RootNamespace>
+    <AssemblyName>Taskodo</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -107,6 +107,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

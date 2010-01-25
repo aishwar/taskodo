@@ -9,7 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace TodoApp
+namespace Taskodo
 {
     public partial class NotesDisplayer : BaseForm
     {
